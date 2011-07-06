@@ -42,7 +42,7 @@ def from_sexpr(sexpr):
         return sexpriter.next()
     if name.startswith('_') or not hasattr(ast, name):
         cls = lookup_node(str(name))
-    rv = getattr(ast, str(name))()
+    rv = cls()
     for field, val in sexpriter:
         setattr(rv, field, from_sexpr(val))
     return rv

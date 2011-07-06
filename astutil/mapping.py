@@ -61,7 +61,7 @@ def lookup_node(name):
     rv = getattr(ast, name, None)
     if rv is not None:
         try:
-            if isinstance(rv, ast.AST):
+            if issubclass(rv, ast.AST):
                 return rv
         except TypeError:
             pass
