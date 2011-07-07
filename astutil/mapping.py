@@ -27,7 +27,8 @@ BINOP_SYMBOLS = {
     ast.RShift:     '>>',
     ast.BitOr:      '|',
     ast.BitAnd:     '&',
-    ast.BitXor:     '^'
+    ast.BitXor:     '^',
+    ast.Pow:        '**'
 }
 
 CMPOP_SYMBOLS = {
