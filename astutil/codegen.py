@@ -264,6 +264,10 @@ class SourceGenerator(NodeVisitor):
                 self.write(', ')
             self.visit(target)
 
+    def visit_ExceptHandler(self, node):
+        'Not sure why these are different classes, but in py2.7 this is needed'
+        return self.visit_excepthandler(node)
+
     def visit_TryExcept(self, node):
         self.newline(node)
         self.write('try:')
